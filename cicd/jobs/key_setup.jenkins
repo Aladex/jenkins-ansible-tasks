@@ -6,6 +6,7 @@ pipelineJob('key-setup') {
         stringParam('Address', '', 'IP Address of server')
         stringParam('Username', 'root', 'SSH User')
         stringParam('Password', '', 'Password to SSH login')
+        stringParam('PubKey', 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDPq2EnCooW8U9GokpTQEQTDAXEuYLSraDWX57iv0+zjb0nk8DyqF/qU2lMTsCPL/FZv+yEt1Kc3q0nINGvqdJzTjkPHlOZfU8+RKDB7I3KYFM6scUMAnvAsJiFps8G/3n3OaH6lyRNLlCeSTGXOoSrRc8dd1krb1xuKXW0y4sDKLYYn6LWoSiC833uH7fEMjJb5QTCJyCWezkpI/ev/Hck99BAyY65Xn7F/YysmQIIYw/9zVyrtp1w5Hoj6bPk8nj06oHWCnXFy43pLqlHEcie9jhe+tZR43dUW9Uk8u2mMN5sHi5bEaqaUtI1auhtDfckcGC3u6me8jN63qF0gs19 aladex@gmail.com', 'PubKey')
     }
     logRotator {
         numToKeep(10)
