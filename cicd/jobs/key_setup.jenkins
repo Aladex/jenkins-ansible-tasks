@@ -3,8 +3,8 @@
 pipelineJob('key-setup') {
     displayName('SSH Key Deploy')
     parameters {
-        stringParam(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
-        password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
+        booleanParam('FLAG', true)
+        choiceParam('OPTION', ['option 1 (default)', 'option 2', 'option 3'])
     }
     logRotator {
         numToKeep(10)
