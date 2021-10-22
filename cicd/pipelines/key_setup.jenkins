@@ -13,10 +13,7 @@ podTemplate(label: label,
     node(label) {
         stage('Run shell') {
             container('sshpass') {
-                sh '''
-                #!/bin/bash -xe
-                sshpass -p "${params.Password}" ssh -o StrictHostKeyChecking=no ${params.Username}@${params.Address} -f "uptime"
-                '''
+                sh "sshpass -p \"${params.Password}\" ssh -o StrictHostKeyChecking=no ${params.Username}@${params.Address} -f \"uptime\""
             }
         }
     }
