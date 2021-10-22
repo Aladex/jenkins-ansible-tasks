@@ -13,8 +13,7 @@ podTemplate(label: label,
     node(label) {
         stage('Run shell') {
             container('alpine') {
-                print "DEBUG: parameter Username = ${params.Username}"
-                sh 'echo "hello world"'
+                sh 'sshpass -p "${params.Password}"" ssh -o StrictHostKeyChecking=no ${params.Username}@${params.Address} -f "uptime"'
             }
         }
     }
