@@ -5,7 +5,7 @@ pipelineJob('key-setup') {
     parameters {
         stringParam('Address', '', 'IP Address of server')
         stringParam('Username', 'root', 'SSH User')
-        nonStoredPasswordParam('SSH Password', 'Password to SSH login')
+        stringParam('Password', '', 'Password to SSH login')
     }
     logRotator {
         numToKeep(10)
