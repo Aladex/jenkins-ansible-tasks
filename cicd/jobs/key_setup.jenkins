@@ -3,8 +3,9 @@
 pipelineJob('key-setup') {
     displayName('SSH Key Deploy')
     parameters {
-        booleanParam('FLAG', true)
-        choiceParam('OPTION', ['option 1 (default)', 'option 2', 'option 3'])
+        stringParam('Address', '', 'IP Address of server')
+        stringParam('Username', 'root', 'SSH User')
+        nonStoredPasswordParam('SSH Password', 'Password to SSH login')
     }
     logRotator {
         numToKeep(10)
