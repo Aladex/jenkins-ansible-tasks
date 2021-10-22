@@ -29,7 +29,7 @@ pipelineJob('key-setup') {
                     branches('*/master')
                 }
             }
-            scriptPath('cicd/pipelines/key-setup.jenkins')
+            scriptPath('cicd/pipelines/key_setup.jenkins')
         }
     }
 }
